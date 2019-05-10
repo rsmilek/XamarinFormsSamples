@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{2F1E4B7D-BAA6-47FA-9BB7-F7BB01F1489D}</ProjectGuid>
+    <ProjectGuid>{0B4E2B2E-F3E9-4645-B031-F108297572C0}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IdentityCardValidator.UWP</RootNamespace>
-    <AssemblyName>IdentityCardValidator.UWP</AssemblyName>
+    <RootNamespace>IDCardValidator.UWP</RootNamespace>
+    <AssemblyName>IDCardValidator.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
@@ -17,7 +17,7 @@
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>IdentityCardValidator.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>IDCardValidator.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -143,14 +143,13 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.264807" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.9" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5"/>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IdentityCardValidator\IdentityCardValidator.csproj">
-      <Project>{B0FE3318-DB9D-459C-B7BE-53BCAAB86942}</Project>
-      <Name>IdentityCardValidator</Name>
+    <ProjectReference Include="..\IDCardValidator\IDCardValidator.csproj">
+      <Project>{3F2EE7F4-DFA4-44E2-B63E-E7385A617B3E}</Project>
+      <Name>IDCardValidator</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
