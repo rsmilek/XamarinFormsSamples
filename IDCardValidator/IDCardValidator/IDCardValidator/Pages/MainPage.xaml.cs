@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace IDCardValidator
+namespace IDCardValidator.Pages
 {
     public partial class MainPage : ContentPage
     {
