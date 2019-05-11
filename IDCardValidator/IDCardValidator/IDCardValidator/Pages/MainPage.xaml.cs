@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IDCardValidator.Tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,22 +24,22 @@ namespace IDCardValidator.Pages
 
         }
 
-        private /* async */ void SendButton_Click(object sender, EventArgs e)
+        private async void SendButton_Click(object sender, EventArgs e)
         {
-            //var manager = new IDValidityManager();
-            //var result = await manager.CheckIDValidity(this.IDNumber.Text);
-            //switch (result)
-            //{
-            //    case IDValidityManager.Validity.Unknown:
-            //        await DisplayAlert("Platnost občanky", "Platnost dokladu se nepodařilo ověřit!", "OK");
-            //        break;
-            //    case IDValidityManager.Validity.Valid:
-            //        await DisplayAlert("Platnost občanky", "Zadaný doklad není evidován v databázi neplatných dokladů", "OK");
-            //        break;
-            //    case IDValidityManager.Validity.Invalid:
-            //        await DisplayAlert("Platnost občanky", "Zadaný doklad je evidován v databázi neplatných dokladů", "OK");
-            //        break;
-            //}
+            var manager = new IDValidityManager();
+            var result = await manager.CheckIDValidity(IDNumber.Text);
+            switch (result)
+            {
+                case IDValidityManager.Validity.Unknown:
+                    await DisplayAlert("Platnost občanky", "Platnost dokladu se nepodařilo ověřit!", "OK");
+                    break;
+                case IDValidityManager.Validity.Valid:
+                    await DisplayAlert("Platnost občanky", "Zadaný doklad není evidován v databázi neplatných dokladů", "OK");
+                    break;
+                case IDValidityManager.Validity.Invalid:
+                    await DisplayAlert("Platnost občanky", "Zadaný doklad je evidován v databázi neplatných dokladů", "OK");
+                    break;
+            }
         }
     }
 }
