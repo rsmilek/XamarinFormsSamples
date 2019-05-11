@@ -11,6 +11,7 @@ namespace IDCardValidator
         {
             InitializeComponent();
 
+            // Nejprve musíme aplikaci říct, jakou stránku má spustit jako první. Nastavením vlastnosti MainPage.
             MainPage = new MainPage();
         }
 

@@ -3,6 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IDCardValidator.App">
     <Application.Resources>
-
+        <!-- OnPlatform je velmi užitečná konstrukce, která vám umožňuje nastavit na jednotlivých platformách jiné hodnoty daných vlastností. 
+        Na ukázce kódu výše je pomocí OnPlatform nastaveno, že na Windows Phone se má použít jiná velikost fontu. 
+        Na všech ostatních platformách bude použita defaultní hodnota Medium. -->
+        <OnPlatform x:TypeArguments="Font" WinPhone="Small" x:Key="textSize" />
+        <!--  -->
+        <Style x:Key="Label" TargetType="Label">
+            <Setter Property="Font" Value="{StaticResource textSize}"/>
+        </Style>
     </Application.Resources>
 </Application>
