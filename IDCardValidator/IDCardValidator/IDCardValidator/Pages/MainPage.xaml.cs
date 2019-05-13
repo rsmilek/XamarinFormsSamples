@@ -1,10 +1,10 @@
-﻿using IDCardValidator.Tools;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using IDCardValidator.Tools;
 
 namespace IDCardValidator.Pages
 {
@@ -38,6 +38,9 @@ namespace IDCardValidator.Pages
                     break;
                 case IDValidityManager.Validity.Invalid:
                     await DisplayAlert("Platnost občanky", "Zadaný doklad je evidován v databázi neplatných dokladů", "OK");
+                    break;
+                case IDValidityManager.Validity.Error:
+                    await DisplayAlert("Platnost občanky", "Nastala chyba při ověřování dokladu!", "OK");
                     break;
             }
         }
